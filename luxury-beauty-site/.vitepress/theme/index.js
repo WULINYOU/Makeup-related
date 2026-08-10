@@ -34,8 +34,20 @@ export default {
   ...DefaultTheme,
   enhanceApp({ app, router }) {
     if (typeof window !== 'undefined') {
+      // Product name lookup by Amazon short URL
+      const amazonUrlToProduct = {
+        'https://amzn.to/3UneheT': 'Augustinus Bader The Rich Cream',
+        'https://amzn.to/4glGo6Q': 'La Prairie Skin Caviar Liquid Lift',
+        'https://amzn.to/3U6Upwx': 'Youth To The People Superberry Dream Mask',
+        'https://amzn.to/4fMm7XV': 'Tatcha Travel Essentials Set',
+        'https://amzn.to/3TLQHbF': 'Drunk Elephant D-Bronzi Sunshine Drops',
+        'https://amzn.to/4z4irbs': 'Charlotte Tilbury Airbrush Setting Spray',
+        'https://amzn.to/4hoeHLO': 'MUGLER Angel Eau de Parfum Gift Set',
+        'https://amzn.to/3TMeyb8': 'Maison Margiela Replica On A Date',
+      }
+
       // GA4 custom event tracking for Amazon affiliate link clicks
-      const trackAmazonClick = (link) => {
+      const trackAmazonClick = (link, extraParams = {}) => {
         if (typeof gtag !== 'undefined') {
           const pagePath = window.location.pathname
           const linkText = link.textContent.trim().substring(0, 50)
@@ -45,12 +57,17 @@ export default {
             : link.closest('.article-footer') ? 'footer'
             : 'inline_content'
 
+          // Identify product by matching link URL
+          const productName = amazonUrlToProduct[link.href] || 'Unknown Product'
+
           gtag('event', 'amazon_affiliate_click', {
             event_category: 'affiliate',
             event_label: linkText,
             page_path: pagePath,
             link_position: linkPosition,
             link_url: link.href,
+            product_name: productName,
+            ...extraParams,
           })
         }
       }
@@ -138,12 +155,14 @@ export default {
           btn.textContent = 'Check Price on Amazon'
           btn.addEventListener('click', () => {
             if (typeof gtag !== 'undefined') {
+              const productName = amazonUrlToProduct[amazonUrl] || 'Unknown Product'
               gtag('event', 'amazon_affiliate_click', {
                 event_category: 'affiliate',
                 event_label: 'Quick Summary CTA',
                 page_path: currentPath,
                 link_position: 'header_cta',
                 link_url: amazonUrl,
+                product_name: productName,
               })
             }
           })
@@ -215,12 +234,14 @@ export default {
           buyBtn.setAttribute('aria-label', 'Buy on Amazon')
           buyBtn.addEventListener('click', () => {
             if (typeof gtag !== 'undefined') {
+              const productName = amazonUrlToProduct[amazonUrl] || 'Unknown Product'
               gtag('event', 'amazon_affiliate_click', {
                 event_category: 'affiliate',
                 event_label: 'BUY floating button',
                 page_path: currentPath,
                 link_position: 'floating_buy',
                 link_url: amazonUrl,
+                product_name: productName,
               })
             }
           })
