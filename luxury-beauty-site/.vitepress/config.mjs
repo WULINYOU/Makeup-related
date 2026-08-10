@@ -17,6 +17,13 @@ export default defineConfig({
     ['meta', { name: 'author', content: 'Luxury Beauty Edit Editorial Team' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Luxury Beauty Edit' }],
+    ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-LLNSSMMLEB' }],
+    ['script', {}, `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LLNSSMMLEB');
+    `],
   ],
 
   themeConfig: {
