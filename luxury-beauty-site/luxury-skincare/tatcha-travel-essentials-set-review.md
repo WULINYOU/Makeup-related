@@ -41,8 +41,8 @@ This article contains affiliate links. If you purchase through these links, we m
 
 [Check Price on Amazon](https://amzn.to/4fMm7XV){.btn .btn-primary}
 
-![Tatcha Travel Essentials Set unboxed — 5 luxury skincare pieces with travel pouch, ready for TSA-friendly travel](/images/tatcha-travel-lifestyle.webp)
-*Real results: Full-size performance in TSA-friendly packaging. The perfect introduction to Japanese luxury skincare.*
+![Traditional Japanese ryokan wooden bath with cherry blossoms for calming sensitive skin care set](/images/tatcha-japanese-ryokan-soaking-tub-spa.webp)
+*Inspired by centuries of Japanese beauty rituals — the essence of Tatcha's Hadasei-3 philosophy.*
 
 ---
 
@@ -69,6 +69,9 @@ But here's the secret: it's also the **perfect introduction to Tatcha** for anyo
 ## Why This Set Stands Out
 
 ### Japanese Skincare Wisdom, Modern Science
+
+![Zen flat lay of Japanese rice powder and matcha green tea representing Hadasei-3 botanical skincare](/images/tatcha-matcha-rice-powder-japanese-botanicals.webp)
+*Hadasei-3 complex — red algae, winter mushroom, and red rice — rooted in 3,000 years of Japanese skincare tradition.*
 
 Tatcha is built on the principles of **Japanese beauty rituals**, specifically the geisha's time-honored skincare practices. The brand's proprietary **Hadasei-3 complex**—a blend of red algae, winter mushroom, and red rice—appears in every product, delivering antioxidant protection and anti-aging benefits rooted in 3,000 years of Japanese skincare tradition.
 

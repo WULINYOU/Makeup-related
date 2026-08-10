@@ -41,7 +41,7 @@ This article contains affiliate links. If you purchase through these links, we m
 
 [Check Price on Amazon](https://amzn.to/3TLQHbF){.btn .btn-primary}
 
-![Woman applying Drunk Elephant D-Bronzi drops mixed with moisturizer — natural sun-kissed glow on all skin tones](/images/d-bronzi-lifestyle.webp)
+![Dewy glowing skin shoulder illuminated by golden hour sunlight for effortless natural makeup look](/images/drunk-elephant-sun-kissed-dewy-skin-radiance.webp)
 *Real results: 90% of users say it looks like a real tan, not a bronzer. Works on all skin tones from fair to deep.*
 
 ---
@@ -106,6 +106,10 @@ The inclusion of **Matrixyl 3000 (Acetyl Tetrapeptide-17)** means you're not jus
 
 ### Matrixyl 3000 Peptide Complex
 A powerhouse anti-aging peptide that:
+
+![Golden bronze liquid serum drops falling on sun-kissed skin for natural glowing face tint](/images/drunk-elephant-d-bronzi-glowing-serum-drops.webp)
+*D-Bronzi's peptide-infused serum texture — each golden drop delivers Matrixyl 3000, Chronocyclin, and antioxidant polyphenols.*
+
 - Signals skin to produce more collagen
 - Reduces the appearance of fine lines and wrinkles
 - Improves skin elasticity and firmness

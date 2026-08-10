@@ -41,8 +41,8 @@ This article contains affiliate links. If you purchase through these links, we m
 
 [Check Price on Amazon](https://amzn.to/4glGo6Q){.btn .btn-primary}
 
-![Woman applying La Prairie Skin Caviar Liquid Lift — visible jawline lifting and wrinkle reduction after 8 weeks](/images/la-prairie-lifestyle.webp)
-*Real results: 72% of users report visible tightening within 15 minutes of first use.*
+![Serene Swiss alpine lake at dawn symbolizing pure high-tech luxury anti-aging skincare](/images/la-prairie-swiss-alpine-lake-pristine-beauty.webp)
+*Inspired by the pristine Swiss Alps — where La Prairie's caviar science meets nature's purest beauty.*
 
 ---
 
@@ -119,6 +119,10 @@ Users reported:
 
 ### Caviar Extract & Caviar Oil
 The cornerstone of La Prairie's Skin Caviar collection:
+
+![Macro shot of golden caviar micro-serum droplets suspended in liquid for face firming and tightening](/images/la-prairie-caviar-serum-droplets-firming-lift.webp)
+*The caviar extract — rich in amino acids, proteins, and lipids that nourish and support skin metabolism at the cellular level.*
+
 - **Amino acids** support skin's natural repair processes
 - **Proteins** provide building blocks for collagen and elastin
 - **Lipids** nourish and strengthen the skin barrier

@@ -41,8 +41,8 @@ This article contains affiliate links. If you purchase through these links, we m
 
 [Check Price on Amazon](https://amzn.to/3U6Upwx){.btn .btn-primary}
 
-![Woman applying Superberry Dream Mask before bed — waking up with glowing, hydrated skin](/images/yttp-superberry-lifestyle.webp)
-*Real results: Apply before bed, wake up with visibly plumper, more radiant skin.*
+![Atmospheric night twilight bedroom scene representing deep evening skin repair and hydration](/images/yttp-overnight-nighttime-skincare-ritual-bedroom.webp)
+*The perfect nighttime ritual — apply before bed, wake up with visibly plumper, more radiant skin.*
 
 ---
 
@@ -91,6 +91,10 @@ With consistent use over 8-12 weeks, users report:
 
 ### Superberry Complex (Proprietary Blend)
 Six superfruits work together to deliver antioxidant protection:
+
+![Crushed antioxidant superberries including maqui acai and goji for brightening overnight mask](/images/yttp-superberry-antioxidant-acai-goji-flatlay.webp)
+*The Superberry Complex — maqui, acai, goji, and prickly pear deliver potent anthocyanins and flavonoids for overnight skin renewal.*
+
 - **Maqui Berry** – Highest ORAC value of any superfruit; fights free radicals
 - **Acai** – Rich in anthocyanins for anti-aging and brightening
 - **Prickly Pear Cactus** – Packed with vitamin E and essential fatty acids

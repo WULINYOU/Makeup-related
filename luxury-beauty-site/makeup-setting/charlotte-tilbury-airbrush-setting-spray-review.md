@@ -41,7 +41,7 @@ This article contains affiliate links. If you purchase through these links, we m
 
 [Check Price on Amazon](https://amzn.to/4z4irbs){.btn .btn-primary}
 
-![Bride wearing Charlotte Tilbury Airbrush Setting Spray — flawless makeup after 12-hour wedding day with no touch-ups](/images/charlotte-tilbury-lifestyle.webp)
+![High-end fashion show backstage vanity mirror with warm lights for bridal makeup setting ritual](/images/charlotte-tilbury-backstage-vanity-mirror-glamour.webp)
 *Real results: 91% of reviewers say their makeup lasts significantly longer. Survives tears, sweat, and 12-hour events.*
 
 ---
@@ -121,6 +121,10 @@ The anti-pollution shield helps defend skin from environmental aggressors like:
 
 ### Film-Forming Polymer Complex
 The backbone of the 16-hour claim:
+
+![Ultra-fine hydrating mist droplets catching rose gold light for 16-hour waterproof makeup hold](/images/charlotte-tilbury-fine-mist-setting-spray-particles.webp)
+*The ultra-fine mist — each micro-droplet forms a flexible, breathable shield that locks makeup for up to 16 hours.*
+
 - **AMP-Acrylates/Allyl Methacrylate Copolymer** — creates a flexible, waterproof film
 - **PVP (Polyvinylpyrrolidone)** — enhances adhesion and longevity
 - Clinical testing shows the film forms within 10 minutes and remains stable for 16 hours

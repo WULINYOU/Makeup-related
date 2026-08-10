@@ -41,7 +41,7 @@ This article contains affiliate links. If you purchase through these links, we m
 
 [Check Price on Amazon](https://amzn.to/4hoeHLO){.btn .btn-primary}
 
-![MUGLER Angel 4-piece gift set unboxed — iconic star-shaped EDP bottle with body lotion, shower gel, and travel spray](/images/mugler-angel-lifestyle.webp)
+![Glamorous city rooftop skyline under starry night sky for iconic romantic evening fragrance](/images/mugler-angel-starry-night-rooftop-glamour.webp)
 *Real results: 90% of users report 10+ hour wear. The 4-piece layering system delivers 12-24 hours of fragrance.*
 
 ---
@@ -90,6 +90,10 @@ Angel is not a subtle fragrance. It's bold, sweet, and unapologetically rich. He
 - **Melon** — fresh fruitiness that adds complexity
 
 ### Heart Notes (15 Minutes to 2 Hours)
+
+![Rich dark chocolate shavings and vanilla beans representing oriental gourmand perfume notes](/images/mugler-angel-gourmand-chocolate-vanilla-patchouli.webp)
+*The iconic gourmand heart — praline, chocolate, and vanilla create the addictive warmth that defined a fragrance category.*
+
 - **Praline** — the signature gourmand note; warm, nutty, caramel-like sweetness
 - **Chocolate** — rich and indulgent without being food-like
 - **Honey** — adds depth and natural sweetness

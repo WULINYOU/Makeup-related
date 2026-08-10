@@ -41,7 +41,7 @@ This article contains affiliate links. If you purchase through these links, we m
 
 [Check Price on Amazon](https://amzn.to/3TMeyb8){.btn .btn-primary}
 
-![Couple wearing Maison Margiela On A Date — romantic summer evening with rose garden and vineyard setting](/images/maison-margiela-on-a-date-lifestyle.webp)
+![Romantic couple walking through a Provence field at sunset representing date night fragrance memory](/images/replica-on-a-date-provence-sunset-lavender.webp)
 *Real results: A truly unisex fragrance that creates a beautiful shared scent experience for couples.*
 
 ---
@@ -90,6 +90,10 @@ On A Date is a **floral-fruity fragrance** with a sophisticated structure that e
 - **Pear** — soft fruitiness that's elegant and approachable
 
 ### Heart Notes (15 Minutes to 2 Hours)
+
+![Fresh rose petals and blackcurrant berries on Provencal stone for floral fruity fragrance notes](/images/replica-on-a-date-damask-rose-blackcurrant.webp)
+*Isparta rose and blackcurrant — the romantic heart of On A Date, capturing a summer evening in Provence.*
+
 - **Isparta Rose** — the star; a rare Turkish rose that's creamy, not powdery
 - **Rose Absolute** — deepens the rose with rich, honeyed facets
 - **Patchouli** — earthy depth that grounds the florals

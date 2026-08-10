@@ -44,8 +44,8 @@ This article contains affiliate links. If you purchase through these links, we m
 
 [Check Price on Amazon](https://amzn.to/3UneheT){.btn .btn-primary}
 
-![Woman applying Augustinus Bader The Rich Cream in her bathroom — real 8-week results showing improved hydration and reduced fine lines](/images/augustinus-bader-lifestyle.webp)
-*Real 8-week results: 88% of dry skin users reported significant improvement in hydration and barrier function.*
+![Minimalist luxury marble bathroom vanity flooded with golden sunlight for daily morning skincare ritual](/images/augustinus-bader-luxury-marble-bathroom-vanity.webp)
+*The ideal setting for your daily skincare ritual — clean, serene, and bathed in natural golden light.*
 
 ---
 
@@ -92,8 +92,8 @@ If you struggle with **chronically dry, flaky skin** or a **compromised skin bar
 **Real User Experience:**  
 *"After just one application, my skin felt plump and hydrated for the first time in months. I have rosacea-prone skin, and this is the only cream that doesn't irritate it."* — Jessica R., verified buyer
 
-![Before and after comparison: left side shows dry, flaky skin with visible fine lines; right side shows smooth, hydrated, radiant skin after 8 weeks of using Augustinus Bader The Rich Cream](/images/augustinus-bader-before-after-8weeks.webp)
-*8-week transformation: Noticeable improvement in skin hydration, texture, and fine lines.*
+![Macro view of rich hydrating ivory cream texture for skin barrier repair and cell renewal](/images/augustinus-bader-rich-cream-texture-cellular-repair.webp)
+*Close-up of the rich ivory cream texture — the TFC8® technology works at the cellular level to deliver medical-grade hydration.*
 
 ### 2. Anti-Aging & Firming
 
