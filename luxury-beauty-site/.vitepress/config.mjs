@@ -13,7 +13,7 @@ export default defineConfig({
     ['meta', { name: 'theme-color', content: '#8B7355' }],
     ['meta', { name: 'robots', content: 'index,follow' }],
     ['meta', { name: 'googlebot', content: 'index,follow' }],
-    ['link', { rel: 'icon', href: '/favicon.png', type: 'image/png' }],
+    ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
     ['meta', { name: 'author', content: 'Luxury Beauty Edit Editorial Team' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Luxury Beauty Edit' }],
@@ -27,7 +27,7 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    logo: '/favicon.png',
+    logo: '/favicon.svg',
     siteTitle: 'Luxury Beauty Edit',
     nav: [
       { text: 'Home', link: '/' },
@@ -76,7 +76,7 @@ export default defineConfig({
       '@type': 'Organization',
       name: 'Luxury Beauty Edit',
       url: hostname,
-      logo: `${hostname}/favicon.png`,
+      logo: `${hostname}/favicon.svg`,
       description: 'Expert-curated luxury beauty reviews and ingredient analysis.',
     })
 
@@ -96,7 +96,7 @@ export default defineConfig({
           url: hostname,
           logo: {
             '@type': 'ImageObject',
-            url: `${hostname}/favicon.png`,
+            url: `${hostname}/favicon.svg`,
           },
         },
         datePublished: frontmatter.date || '',
