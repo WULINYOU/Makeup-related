@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #FAFAF8; } /* 网站暖白色/奶油色背景 */
+      
+      /* 网站统一深炭灰文字 */
+      .brand-title {
+        font-family: "Cinzel", "Cormorant Garamond", "Didot", "Georgia", serif;
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: 0.45em;
+        fill: #2D2D2D;
+        text-anchor: middle;
+      }
+      
+      /* 网站品牌主色 #8B7355 */
+      .brand-sub {
+        font-family: "Montserrat", "Helvetica Neue", sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.55em;
+        fill: #8B7355;
+        text-anchor: middle;
+      }
+    </style>
+
+    <linearGradient id="bronze-gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A0896C" />
+      <stop offset="35%" stop-color="#8B7355" />
+      <stop offset="70%" stop-color="#735C40" />
+      <stop offset="100%" stop-color="#5B462C" />
+    </linearGradient>
+
+    <radialGradient id="bronze-wax-body" cx="38%" cy="32%" r="68%">
+      <stop offset="0%" stop-color="#BCA88E" />
+      <stop offset="30%" stop-color="#A0896C" />
+      <stop offset="70%" stop-color="#8B7355" />
+      <stop offset="100%" stop-color="#6E583D" />
+    </radialGradient>
+
+    <filter id="wax-soft-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="2" dy="10" stdDeviation="12" flood-color="#5B462C" flood-opacity="0.25" />
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#8B7355" flood-opacity="0.15" />
+    </filter>
+
+    <filter id="deboss-effect">
+      <feOffset dx="1" dy="1.5" />
+      <feGaussianBlur stdDeviation="1" result="offset-blur" />
+      <feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse" />
+      <feFlood flood-color="#3D2E1C" flood-opacity="0.6" result="color" />
+      <feComposite operator="in" in="color" in2="inverse" result="shadow" />
+      <feComposite operator="over" in="shadow" in2="SourceGraphic" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="520" class="bg" />
+
+  <circle cx="400" cy="180" r="180" fill="#8B7355" opacity="0.08" filter="blur(40px)" />
+
+  <g filter="url(#wax-soft-shadow)">
+    <path d="
+      M 395,82 
+      C 418,80 435,88 458,84 
+      C 482,80 498,99 518,114 
+      C 538,129 532,154 542,178 
+      C 552,202 541,228 532,248 
+      C 523,268 503,275 482,287 
+      C 461,299 435,289 408,294 
+      C 381,299 352,306 328,294 
+      C 304,282 291,260 278,241 
+      C 265,222 252,201 258,175 
+      C 264,149 285,134 300,113 
+      C 315,92 338,98 360,88 
+      C 375,81 382,83 395,82 Z" 
+      fill="url(#bronze-wax-body)" 
+      stroke="#735C40" 
+      stroke-width="1.2" />
+
+    <path d="
+      M 398,92 
+      C 428,88 450,100 480,105 
+      C 510,110 520,138 528,168 
+      C 536,198 525,225 515,248 
+      C 505,271 470,278 442,281 
+      C 414,284 380,288 350,280 
+      C 320,272 298,252 288,228 
+      C 278,204 275,172 285,148 
+      C 295,124 330,100 360,96 Z" 
+      fill="none" 
+      stroke="#A0896C" 
+      stroke-width="2" 
+      opacity="0.5" />
+
+    <circle cx="400" cy="180" r="82" fill="none" stroke="#FAFAF8" stroke-width="1" opacity="0.6" />
+    <circle cx="400" cy="180" r="76" fill="none" stroke="#FAFAF8" stroke-width="2" />
+    <circle cx="400" cy="180" r="62" fill="none" stroke="#FAFAF8" stroke-width="1" stroke-dasharray="3,3" opacity="0.8" />
+
+    <g transform="translate(400, 182)" filter="url(#deboss-effect)">
+      <path d="M -18,25 L 0,-28 L 18,25 L 11,25 L 0,-12 L -11,25 Z" fill="#FAFAF8" />
+      <path d="M -11,6 L 11,6 L 11,10 L -11,10 Z" fill="#FAFAF8" />
+
+      <rect x="-15" y="-24" width="5.5" height="49" fill="#FAFAF8" />
+      <path d="M -15,-24 L 14,-24 L 14,-19 L -9.5,-19 Z" fill="#FAFAF8" />
+      <path d="M -3,-35 L 8,-43 L 12,-40 L 1,-32 Z" fill="#FFF" />
+      <path d="M -9.5,-2 L 8,-2 L 8,2 L -9.5,2 Z" fill="#FAFAF8" />
+      <path d="M -15,20 L 17,20 L 17,25 L -19,25 Z" fill="#FAFAF8" />
+      
+      <polygon points="0,-18 2,-14 6,-14 3,-11 4,-7 0,-10 -4,-7 -3,-11 -6,-14 -2,-14" fill="#FFF" />
+      <circle cx="-12" cy="-14" r="1.5" fill="#FAFAF8" />
+      <circle cx="12" cy="-14" r="1.5" fill="#FAFAF8" />
+    </g>
+
+    <circle cx="272" cy="188" r="2" fill="#FAFAF8" opacity="0.7" />
+    <circle cx="528" cy="132" r="1.5" fill="#FAFAF8" opacity="0.6" />
+    <circle cx="340" cy="288" r="1.8" fill="#FAFAF8" opacity="0.7" />
+    <path d="M 400,100 L 401.5,104 L 405,105.5 L 401.5,107 L 400,111 L 398.5,107 L 395,105.5 L 398.5,104 Z" fill="#FAFAF8" />
+  </g>
+
+  <g transform="translate(0, 35)">
+    <text x="408" y="330" class="brand-title">ÉCLAT &amp; AURA</text>
+
+    <line x1="300" y1="352" x2="365" y2="352" stroke="#8B7355" stroke-width="1" opacity="0.6" />
+    <polygon points="400,348 403,352 400,356 397,352" fill="#8B7355" />
+    <line x1="435" y1="352" x2="500" y2="352" stroke="#8B7355" stroke-width="1" opacity="0.6" />
+
+    <text x="403" y="380" class="brand-sub">OFFICIAL BEAUTY SEAL • PARIS</text>
+  </g>
+</svg>
