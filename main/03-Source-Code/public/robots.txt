@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://kakobuy-7zh.pages.dev/sitemap.xml
+
+# Crawl-delay (optional, polite crawling)
+Crawl-delay: 1
+
+# Allow all important pages
+Allow: /posts/
+Allow: /sitemap.xml
+
+# No disallowed paths - everything is public

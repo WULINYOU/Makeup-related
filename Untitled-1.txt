@@ -1,0 +1,112 @@
+
+网站设计要点
+Homepage Layout for Trust: Keep it clean and editorial. Feature a clear "Who We Are" statement highlighting real skincare knowledge, a curated "Featured Top 10" grid with high-res photos, and visible affiliate disclosures right at the top. Avoid intrusive pop-ups or flash sale banners.
+
+Article Layout for SEO & Conversion: Put a quick-summary comparison table (TL;DR) at the very top for fast skimmers. Follow it with structured "Ingredient Spotlight" callouts, balanced Pros/Cons lists (always include real flaws), and clear, non-pushy text links or simple "Check Price" buttons.
+
+Site Styles Reddit Users Hate: Aggressive spammy elements—like giant pop-up email forms, fake countdown timers, auto-playing video ads, and robotic AI text that copies brand descriptions without genuine pros, cons, or skin-type nuance.
+
+
+📋 奢华美妆（Luxury Beauty）导购站技术与设计开发需求清单一、 网站整体定位与架构 (Architecture)目标：打造极简、高专业度、符合 Reddit 用户信任偏好的奢华美妆导购站，通过 Google 自然搜索（SEO）获取流量，并转化亚马逊 10% 高佣金品类。内链结构（星型收敛链轮）：首页 $\rightarrow$ 栏目页 $\rightarrow$ 相关文章页 1 $\rightarrow$ 相关文章页 2...n所有层级页面 均需配置指向 首页 的直接回流链接，防止出现权重死胡同。二、 前端与 UI/UX 设计需求 (Design & Layout)1. 首页 (Homepage Design)[ ] 风格定位：极简美学（Clean Beauty / High-End Editorial），避免任何像“低价折扣网”的元素。[ ] 信任标识 (Trust Signals)：顶部/页脚显著位置放 Affiliate Disclosure（联盟免责声明）。首页展示专业的“关于我们/编辑团队”介绍（突出美妆/成分分析背景）。[ ] 核心布局：顶栏：品牌 Logo + 简洁分类导航（如：Moisturizers, Serums, Perfumes, Gift Sets）。首屏：无轮播图，使用静态高定风 Banner + 选品切入点介绍。模块：主打“Top 10 High-End Beauty Essentials”精选网格（Grid View）。[ ] 严禁包含：侵入式弹窗（Pop-ups）、倒计时抢购计时器、自动播放视频广告。2. 文章详情页 (Article Page Layout)[ ] 首屏快选区 (TL;DR Comparison Table)：文章最顶部放置一目了然的对比表格（包含：产品名、核心成分、适用肤质、评分、外链跳转按钮）。[ ] 文章正文组件：成分高亮框 (Ingredient Spotlight)：使用卡片化样式突显专利成分（如 TFC8, Miracle Broth）。优缺点模块 (Pros & Cons Card)：设计清晰的对立比对框（必须包含真实缺点，建立信任）。引导转化按钮 (CTA)：简洁优雅的“Check Price on Amazon”按钮，颜色符合全站高定主色调。[ ] 内链与导航区：顶部显示 HTML & Schema 格式的面包屑导航（例：Home > Category > Product Review）。文章底部自动调取同一栏目下的 3 篇相关文章卡片（完成 文章 n ➔ 文章 n+1 横向互链）。三、 技术与功能开发需求 (Technical & SEO Requirements)1. SEO 基础配置[ ] URL 结构：使用短URL，如 domain.com/category/product-name-review。[ ] Schema 结构化数据：自动为评测文章生成 Product 和 Review 结构化数据（帮助在 Google 搜索结果中展示星级评分）。开启 BreadcrumbList 结构化数据。[ ] 自动化 Sitemap：生成并自动更新 sitemap.xml。2. 外链与合规处理 (Affiliate Compliance)[ ] 链接属性控制：所有指向亚马逊的产品外链，系统需自动添加 rel="sponsored nofollow" 和 target="_blank"。[ ] 合规页面预留：底部（Footer）写死静态页面入口：Privacy Policy, Terms of Service, Amazon Associate Disclosure。3. 性能与响应式 (Performance)[ ] 极致加载速度：支持图片 WebP 格式化及懒加载（Lazy Loading），追求 Core Web Vitals（CWV）指标绿标。[ ] 移动端适配：100% 优先适配移动端（Mobile-First Viewports），确保对比表格在手机端可滑动/自适应。
+
+
+收到！从你整理的数据来看，你的选品、用户痛点、优点缺点、亚马逊联盟链接以及详细的关键词搜索量/趋势数据（Google Keyword Planner 数据）都极其完整，这构成了做美妆导购站（Affiliate Site）非常坚实的基础。
+
+基于这些已有数据，搭建网站和建立文章矩阵可以分为“网站技术搭建”**和**“文章矩阵落地”两大核心步骤：
+
+---
+
+### 第一步：网站结构搭建与技术配置（前端与后台）
+
+根据我们之前的需求清单和数据结构，技术团队需要按照以下规范建立网站：
+
+#### 1. 栏目分类规划 (Categories)
+
+建议根据现有 8 款产品的属性，将网站划分为 4 个主栏目（用于承接高搜索量词）：
+
+* **Luxury Skincare（奢华护肤）**：包含 Augustinus Bader, La Prairie, Youth To The People, Tatcha
+* **Tinted & Sun-Glow（美肤着色/晒后/底妆）**：包含 Drunk Elephant D-Bronzi
+* **Makeup & Setting（彩妆与定妆）**：包含 Charlotte Tilbury Setting Spray
+* **Niche Fragrances（高定香氛）**：包含 MUGLER Angel, Maison Margiela
+
+#### 2. 页面组件自动化配置
+
+* **首页 (Homepage)**：展示“Top 8 Luxury Beauty Essentials”精选网格 + 极简高定风格 Banner + 联盟免责声明。
+* **文章页 (Article Page)**：
+1. **首屏**：自动渲染 **TL;DR 对比/速览表格**（提取价格、核心成分、最适合肤质、Amazon 购买按钮）。
+2. **正文**：包含**成分高亮框 (Ingredient Spotlight)**、**Pros & Cons 优缺点对立卡片**。
+3. **导航/内链**：开启面包屑导航（`Home > Category > Article`），底部自动调用同栏目下其他 3 篇相关文章卡片（形成横向互链，防死胡同）。
+
+
+
+---
+
+### 第二步：文章矩阵规划（利用 CSV 关键词批量裂变）
+
+利用你各个 CSV 文件中的长尾关键词，可以将内容分为 **3 种文章矩阵类型**：
+
+#### 矩阵 1：单品深度评测（Single Product Deep Reviews）— 共 8 篇
+
+* **目标**：吃下极高购买意图的单品搜索流量（如 `Drunk Elephant D-Bronzi review`, `Augustinus Bader The Rich Cream worth it`）。
+* **写作结构**：按照你整理的 5 大模块（基本信息 $\rightarrow$ 核心功效 $\rightarrow$ 成分解析 $\rightarrow$ 肤质兼容 $\rightarrow$ 真实优缺点）直接生成。
+
+#### 矩阵 2：对标/竞品 PK 页面（Versus / Comparison Pages）— 约 6–8 篇
+
+* **目标**：锁定在两个高端产品之间犹豫不决的用户（转化率极高）。
+* **爆款选题示例**：
+* *Augustinus Bader vs La Prairie Liquid Lift: Which Luxury Anti-Aging Serum Is Worth It?*
+* *Tatcha Dewy Skin Cream vs Youth To The People Superberry Mask for Dry Winter Skin*
+* *Maison Margiela On A Date vs MUGLER Angel: Best Date Night Gourmand Perfume*
+
+
+
+#### 矩阵 3：痛点/场景榜单集合页（Best / Listicle Guides）— 约 5–10 篇
+
+* **目标**：利用高搜索量的大词获取流量（如 CSV 中的 `best face cream for mature skin` - 14,800次/月搜索）。
+* **爆款选题示例**：
+* *5 Best Luxury Face Creams for Mature Skin & Deep Wrinkles (2026 Guide)*
+* *Best Travel-Friendly Skincare Sets for Long Flights & Sensitive Skin*
+* *Top Waterproof Setting Sprays for All-Day Wear & Weddings*
+
+
+
+---
+
+### 💡 下一步建议
+
+1. **对接开发**：将上文的《开发与设计需求文档 (PRD)》提交给你的程序开发团队，先把网站框架搭好。
+2. **生成文章内容**：如果你需要将这 8 个产品的 CSV 关键词和 5 大素材，**批量生成符合 Google SEO 规范的具体英文文章草稿或 Markdown 内容**，我可以随时帮你针对具体的单品或 PK 选题进行撰写！
+
+
+
+
+“As an Amazon Associate I earn from qualifying purchases.”（作为亚马逊合伙人，我从符合条件的购买中获得收益。）
+
+
+
+
+佣金	品牌	产品名称	产品价格	产品链接	产品图片代码
+0.1	La Mer	Youth To The People Superberry Dream Mask	53	https://amzn.to/3U6Upwx	"<a href=""https://amzn.to/3U6Upwx"" target=""_blank"" rel=""nofollow sponsored"">
+  <img src=""https://m.media-amazon.com/images/I/718d+AtnahL._SL1500_.jpg"" alt=""Youth To The People Superberry Dream Mask"" style=""max-width:100%; height:auto;"">
+</a>"
+	Tatcha	Tatcha's Travel Essentials Set, Trial-Size Bestselling Skincare & Pouch	74	https://amzn.to/4fMm7XV	"<a href=""https://amzn.to/4fMm7XV"" target=""_blank"" rel=""nofollow sponsored"">
+  <img src=""https://m.media-amazon.com/images/I/71yutRE36PL._SL1500_.jpg"" alt=""Tatcha Travel Essentials Set"" style=""max-width:100%; height:auto;"">
+</a>"
+	Augustinus Bader	 Augustinus Bader The Rich Cream	315	https://amzn.to/3UneheT	"<a href=""https://amzn.to/3UneheT"" target=""_blank"" rel=""nofollow sponsored"">
+  <img src=""https://m.media-amazon.com/images/I/71grYUW1NDL._SL1500_.jpg"" alt=""Augustinus Bader The Rich Cream"" style=""max-width:100%; height:auto;"">
+</a>"
+	Drunk Elephant	Drunk Elephant D-Bronzi Sunshine Drops – Anti-Pollution Bronzing Serum Drops	39	https://amzn.to/3TLQHbF	"<a href=""https://amzn.to/3TLQHbF"" target=""_blank"" rel=""nofollow sponsored"">
+  <img src=""https://m.media-amazon.com/images/I/61JPfGQTW1L._SL1500_.jpg"" alt=""Drunk Elephant D-Bronzi Sunshine Drops"" style=""max-width:100%; height:auto;"">
+</a>"
+	Jo Malone	MUGLER Angel Eau de Parfum	160	https://amzn.to/4hoeHLO	"<a href=""https://amzn.to/4hoeHLO"" target=""_blank"" rel=""nofollow sponsored"">
+  <img src=""https://m.media-amazon.com/images/I/71K-3KyoSzL._SL1500_.jpg"" alt=""MUGLER Angel 4-Piece Perfume Set"" style=""max-width:100%; height:auto;"">
+</a>"
+	Maison Margiela REPLICA	Maison Margiela Replica On A Date – Floral Fragrance for Men and Women | Eau de Toilette with Isparata Rose, Blackcurrant & Patchouli	98	https://amzn.to/3TMeyb8	"<a href=""https://amzn.to/3TMeyb8"" target=""_blank"" rel=""nofollow sponsored"">
+  <img src=""https://m.media-amazon.com/images/I/71HS5mP8-xL._SL1500_.jpg"" alt=""Maison Margiela Replica On a Date Fragrance Set"" style=""max-width:100%; height:auto;"">
+</a>"
+	Charlotte Tilbury	Charlotte Tilbury Airbrush Flawless Setting Spray – Ultra-Fine Hydrating Mist to Prime & Set Makeup Up to 16Hr – Soothes and Blurs Skin, Waterproof, Wedding Makeup	59	https://amzn.to/4z4irbs	"<a href=""https://amzn.to/4z4irbs"" target=""_blank"" rel=""nofollow sponsored"">
+  <img src=""https://m.media-amazon.com/images/I/51LeJmwypwL._SL1500_.jpg"" alt=""Charlotte Tilbury Airbrush Flawless Setting Spray"" style=""max-width:100%; height:auto;"">
+</a>"
+	La Prairie	La Prairie Skin Caviar Liquid Lift, Lifting & Firming Face Serum	810	https://amzn.to/4glGo6Q	"<a href=""https://amzn.to/4glGo6Q"" target=""_blank"" rel=""nofollow sponsored"">
+  <img src=""https://m.media-amazon.com/images/I/61OMnjfoLzL._SL1500_.jpg"" alt=""La Prairie Skin Caviar Liquid Lift"" style=""max-width:100%; height:auto;"">
+</a>"

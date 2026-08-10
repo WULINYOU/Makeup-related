@@ -1,0 +1,952 @@
+/* ============================================
+   Luxury Beauty Edit - Custom Styles
+   High-end editorial aesthetic
+   ============================================ */
+
+:root {
+  /* Brand colors - warm luxury gold/champagne */
+  --vp-c-brand-1: #8B7355;
+  --vp-c-brand-2: #A0896C;
+  --vp-c-bg: #FAFAF8;
+  --vp-c-text-1: #2D2D2D;
+  --vp-c-text-2: #6B6B6B;
+  --vp-font-family-base: 'Georgia', 'Times New Roman', serif;
+  --vp-nav-height: 4rem;
+
+  /* Luxury palette */
+  --color-gold: #8B7355;
+  --color-gold-light: #A0896C;
+  --color-cream: #FAFAF8;
+  --color-charcoal: #2D2D2D;
+  --color-warm-gray: #6B6B6B;
+  --color-rose: #C4A882;
+  --color-sage: #7D8B74;
+  --color-blush: #E8D5C4;
+}
+
+.dark {
+  --vp-c-bg: #1A1A1A;
+  --vp-c-text-1: #F5F5F0;
+  --vp-c-text-2: #B0B0A8;
+  --color-cream: #1A1A1A;
+  --color-charcoal: #F5F5F0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  background: var(--vp-c-bg);
+}
+
+/* ============================================
+   Global Marquee / Scrolling Banner
+   ============================================ */
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(90deg, #8B7355 0%, #A0896C 50%, #8B7355 100%);
+  padding: 0.5rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.VPNav {
+  top: 2.8rem !important;
+  z-index: 200 !important;
+}
+
+.VPContent {
+  padding-top: 12rem;
+}
+
+@media (max-width: 768px) {
+  .VPContent {
+    padding-top: 6rem;
+  }
+}
+
+.marquee-container::before,
+.marquee-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee-container::before {
+  left: 0;
+  background: linear-gradient(90deg, #8B7355 0%, transparent 100%);
+}
+
+.marquee-container::after {
+  right: 0;
+  background: linear-gradient(270deg, #8B7355 0%, transparent 100%);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 60s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 2rem;
+  white-space: nowrap;
+  color: white;
+  font-weight: 400;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+}
+
+.marquee-item .text {
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.marquee-separator {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.8rem;
+  padding: 0 0.5rem;
+}
+
+/* ============================================
+   Homepage Hero Styles
+   ============================================ */
+
+.VPHero {
+  min-height: 500px !important;
+  padding: 6rem 0 3rem !important;
+}
+
+.VPHero .container {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 3rem !important;
+  margin: 0 auto !important;
+  max-width: 1200px !important;
+}
+
+.VPHero .main {
+  min-width: 0 !important;
+  text-align: left !important;
+  order: 1 !important;
+  padding-top: 0 !important;
+}
+
+.VPHero .image {
+  flex: 0 1 40% !important;
+  min-width: 0 !important;
+  order: 2 !important;
+}
+
+.VPHero .name {
+  font-family: 'Georgia', serif !important;
+  font-size: 3.5rem !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.02em !important;
+  color: var(--color-charcoal) !important;
+  line-height: 1.1 !important;
+}
+
+.VPHero .text {
+  font-size: 1.2rem !important;
+  color: var(--color-warm-gray) !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.02em !important;
+  margin-top: 1rem !important;
+}
+
+.VPHero .tagline {
+  font-size: 1rem !important;
+  color: var(--color-gold) !important;
+  font-style: italic !important;
+  margin-top: 1.5rem !important;
+  font-family: 'Georgia', serif !important;
+}
+
+.VPHero .actions {
+  margin-top: 2.5rem !important;
+  gap: 1rem !important;
+}
+
+.VPHero .actions a {
+  border-radius: 2px !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  padding: 0.8rem 2rem !important;
+}
+
+/* ============================================
+   Stats Grid - Editorial Style
+   ============================================ */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 3rem 0;
+  padding: 2rem 0;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 2px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  border: 1px solid #E8E4DE;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark .stat-card {
+  background: #252525;
+  border-color: #3A3A3A;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(139, 115, 85, 0.12);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--color-gold);
+  margin-bottom: 0.5rem;
+  font-family: 'Georgia', serif;
+  letter-spacing: -0.02em;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--color-warm-gray);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* ============================================
+   Product Grid - Homepage
+   ============================================ */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 1px solid #E8E4DE;
+  border-radius: 2px;
+  padding: 2rem 1.5rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 200px;
+}
+
+.dark .product-card {
+  background: #252525;
+  border-color: #3A3A3A;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(139, 115, 85, 0.15);
+}
+
+.product-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-charcoal);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.dark .product-name {
+  color: #F5F5F0;
+}
+
+.product-brand {
+  font-size: 0.7rem;
+  color: var(--color-warm-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.75rem;
+}
+
+.product-price {
+  font-size: 1rem;
+  color: var(--color-gold);
+  font-weight: 500;
+  font-family: 'Georgia', serif;
+}
+
+.product-cta {
+  font-size: 0.7rem;
+  color: var(--color-gold);
+  font-weight: 500;
+  padding: 6px 16px;
+  border: 1px solid var(--color-gold);
+  border-radius: 2px;
+  transition: background 0.3s ease, color 0.3s ease;
+  margin-top: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.product-card:hover .product-cta {
+  background: var(--color-gold);
+  color: white;
+}
+
+/* ============================================
+   Article Action Buttons
+   ============================================ */
+
+.article-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+  flex-wrap: wrap;
+}
+
+.article-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.5rem;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+  min-height: 44px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.article-action-btn.brand {
+  background: var(--color-gold);
+  color: white;
+  border-color: var(--color-gold);
+}
+
+.article-action-btn.brand:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(139, 115, 85, 0.3);
+}
+
+.article-action-btn.alt {
+  background: transparent;
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.article-action-btn.alt:hover {
+  background: var(--color-gold);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   TL;DR Comparison Table
+   ============================================ */
+
+.tldr-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.tldr-table th {
+  background: var(--color-gold);
+  color: white;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.tldr-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #E8E4DE;
+  vertical-align: top;
+}
+
+.dark .tldr-table td {
+  border-bottom-color: #3A3A3A;
+}
+
+.tldr-table tr:hover td {
+  background: rgba(139, 115, 85, 0.04);
+}
+
+/* ============================================
+   Ingredient Spotlight Card
+   ============================================ */
+
+.ingredient-spotlight {
+  background: linear-gradient(135deg, rgba(139, 115, 85, 0.06) 0%, rgba(160, 137, 108, 0.06) 100%);
+  border-left: 3px solid var(--color-gold);
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  border-radius: 0 2px 2px 0;
+}
+
+.dark .ingredient-spotlight {
+  background: linear-gradient(135deg, rgba(139, 115, 85, 0.15) 0%, rgba(160, 137, 108, 0.15) 100%);
+}
+
+.ingredient-spotlight h4 {
+  color: var(--color-gold);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.75rem;
+}
+
+/* ============================================
+   Pros & Cons Card
+   ============================================ */
+
+.pros-cons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.pros-card, .cons-card {
+  padding: 1.5rem;
+  border-radius: 2px;
+  border: 1px solid #E8E4DE;
+}
+
+.dark .pros-card, .dark .cons-card {
+  border-color: #3A3A3A;
+}
+
+.pros-card {
+  border-left: 3px solid #7D8B74;
+}
+
+.cons-card {
+  border-left: 3px solid #C4756C;
+}
+
+.pros-card h4, .cons-card h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+}
+
+.pros-card h4 { color: #7D8B74; }
+.cons-card h4 { color: #C4756C; }
+
+/* ============================================
+   CTA Button - Check Price on Amazon
+   ============================================ */
+
+.check-price-btn, .cta-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: var(--color-gold);
+  color: white;
+  text-decoration: none;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-gold);
+}
+
+.check-price-btn:hover, .cta-button:hover {
+  background: transparent;
+  color: var(--color-gold);
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   Category Page Styles
+   ============================================ */
+
+.category-header {
+  text-align: center;
+  padding: 3rem 0 2rem;
+  border-bottom: 1px solid #E8E4DE;
+  margin-bottom: 2rem;
+}
+
+.dark .category-header {
+  border-bottom-color: #3A3A3A;
+}
+
+.category-header h1 {
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--color-charcoal);
+  letter-spacing: -0.01em;
+}
+
+.category-header p {
+  color: var(--color-warm-gray);
+  font-size: 1rem;
+  margin-top: 0.75rem;
+  font-style: italic;
+  font-family: 'Georgia', serif;
+}
+
+/* ============================================
+   Related Posts Section
+   ============================================ */
+
+.related-posts {
+  background: linear-gradient(135deg, rgba(139, 115, 85, 0.06) 0%, rgba(160, 137, 108, 0.06) 100%);
+  border-left: 3px solid var(--color-gold);
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  border-radius: 0 2px 2px 0;
+}
+
+.dark .related-posts {
+  background: linear-gradient(135deg, rgba(139, 115, 85, 0.15) 0%, rgba(160, 137, 108, 0.15) 100%);
+}
+
+.related-posts h3 {
+  color: var(--color-gold);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+}
+
+.related-posts ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.related-posts li {
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #E8E4DE;
+}
+
+.dark .related-posts li {
+  border-bottom-color: #3A3A3A;
+}
+
+.related-posts li:last-child {
+  border-bottom: none;
+}
+
+.related-posts a {
+  color: var(--color-gold);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.related-posts a:hover {
+  color: var(--color-gold-light);
+  text-decoration: underline;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+
+.vp-doc h1 {
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  color: var(--color-charcoal);
+  letter-spacing: -0.01em;
+}
+
+.vp-doc h2 {
+  font-family: 'Georgia', serif;
+  font-size: 1.8rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  color: var(--color-charcoal);
+  border-bottom: 1px solid #E8E4DE;
+  padding-bottom: 0.5rem;
+}
+
+.dark .vp-doc h2 {
+  border-bottom-color: #3A3A3A;
+}
+
+.vp-doc h3 {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--color-charcoal);
+}
+
+.vp-doc h4 {
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: var(--color-warm-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.vp-doc p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.dark .vp-doc p {
+  color: #CCC;
+}
+
+.vp-doc ul {
+  margin-bottom: 1.5rem;
+}
+
+.vp-doc li {
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   Affiliate Disclosure Banner
+   ============================================ */
+
+.affiliate-disclosure {
+  background: #F5F0EB;
+  border: 1px solid #E8E4DE;
+  border-radius: 2px;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 0.8rem;
+  color: var(--color-warm-gray);
+  line-height: 1.6;
+}
+
+.dark .affiliate-disclosure {
+  background: #252525;
+  border-color: #3A3A3A;
+}
+
+/* ============================================
+   Hide default VitePress sidebar/outline
+   ============================================ */
+
+.VPSidebar,
+.VPDocAside {
+  display: none !important;
+}
+
+.VPDoc .content {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.VPDoc .content-container {
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  padding: 0 2rem !important;
+}
+
+.VPDoc h1 {
+  text-align: center !important;
+}
+
+.VPLastUpdated {
+  display: none !important;
+}
+
+/* Hide article tags from frontend (keep for SEO) */
+article .tags,
+article .tag-list,
+article [class*="tag"],
+.doc-content .tags,
+.doc-content .tag-list,
+.doc-content [class*="tag"] {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* ============================================
+   Responsive Styles
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pros-cons-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .VPHero .container {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    padding: 0 1rem !important;
+  }
+
+  .VPHero .main {
+    text-align: center !important;
+  }
+
+  .VPHero .name {
+    font-size: 2rem !important;
+  }
+
+  .VPHero .text {
+    font-size: 1rem !important;
+  }
+
+  .VPHero .image {
+    display: none !important;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .vp-doc h1 {
+    font-size: 1.75rem;
+  }
+
+  .vp-doc h2 {
+    font-size: 1.5rem;
+  }
+
+  .article-actions {
+    gap: 0.75rem;
+  }
+
+  .marquee-item {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  .marquee-item .text {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .VPHero .name {
+    font-size: 1.6rem !important;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .stat-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .product-card {
+    padding: 1.2rem 0.8rem;
+    min-height: 160px;
+  }
+}
+
+/* ============================================
+   Trust Badges - Conversion Optimization
+   ============================================ */
+
+.trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, rgba(139, 115, 85, 0.06) 0%, rgba(160, 137, 108, 0.06) 100%);
+  border: 1px solid #E8E4DE;
+  border-radius: 2px;
+  justify-content: center;
+}
+
+.dark .trust-badges {
+  background: linear-gradient(135deg, rgba(139, 115, 85, 0.15) 0%, rgba(160, 137, 108, 0.15) 100%);
+  border-color: #3A3A3A;
+}
+
+.trust-badges span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-charcoal);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.dark .trust-badges span {
+  color: #F5F5F0;
+}
+
+.trust-badges span svg {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+}
+
+@media (max-width: 768px) {
+  .trust-badges {
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .trust-badges span {
+    font-size: 0.75rem;
+  }
+}
+
+/* ============================================
+   Floating Action Buttons (TOP + BUY)
+   ============================================ */
+
+.floating-action-buttons {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  z-index: 9999;
+}
+
+.floating-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.floating-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+}
+
+.floating-btn:active {
+  transform: translateY(-1px);
+}
+
+.floating-btn-top {
+  background: var(--color-gold);
+  color: white;
+}
+
+.floating-btn-top:hover {
+  background: var(--color-gold-light);
+}
+
+.floating-btn-buy {
+  background: #D4756B;
+  color: white;
+}
+
+.floating-btn-buy:hover {
+  background: #E08880;
+}
+
+@media (max-width: 768px) {
+  .floating-action-buttons {
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+
+  .floating-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 0.65rem;
+  }
+}
