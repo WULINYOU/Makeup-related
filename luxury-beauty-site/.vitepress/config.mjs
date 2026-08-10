@@ -39,7 +39,7 @@ export default defineConfig({
     ],
     sidebar: {},
     footer: {
-      message: '<strong>Affiliate Disclosure:</strong> As an Amazon Associate we earn from qualifying purchases. All reviews are based on independent editorial research. <a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms/">Terms of Service</a> | <a href="/affiliate-disclosure/">Affiliate Disclosure</a>',
+      message: '<strong>Affiliate Disclosure:</strong> As an Amazon Associate we earn from qualifying purchases. All reviews are based on independent editorial research. <a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms/">Terms of Service</a> | <a href="/affiliate-disclosure/">Affiliate Disclosure</a> | <a href="https://makeup-related.pages.dev/sitemap.xml" target="_blank" rel="noopener">Sitemap</a>',
       copyright: 'Copyright © 2026 Luxury Beauty Edit. All rights reserved.',
     },
     docFooter: {
