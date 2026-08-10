@@ -1,0 +1,6 @@
+name = "makeup-related"
+pages_build_output_dir = "luxury-beauty-site/.vitepress/dist"
+
+[build]
+command = "npm run build"
+root_dir = "luxury-beauty-site"
