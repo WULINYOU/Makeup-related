@@ -1,0 +1,9 @@
+{
+  "name": "makeup-related",
+  "private": true,
+  "scripts": {
+    "dev": "cd luxury-beauty-site && npx vitepress dev",
+    "build": "cd luxury-beauty-site && npx vitepress build",
+    "preview": "cd luxury-beauty-site && npx vitepress preview"
+  }
+}
