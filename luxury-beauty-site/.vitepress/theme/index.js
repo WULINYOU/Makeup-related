@@ -34,12 +34,42 @@ export default {
   ...DefaultTheme,
   enhanceApp({ app, router }) {
     if (typeof window !== 'undefined') {
+      // GA4 custom event tracking for Amazon affiliate link clicks
+      const trackAmazonClick = (link) => {
+        if (typeof gtag !== 'undefined') {
+          const pagePath = window.location.pathname
+          const linkText = link.textContent.trim().substring(0, 50)
+          const linkPosition = link.closest('.article-actions') ? 'header_cta'
+            : link.closest('.floating-action-buttons') ? 'floating_buy'
+            : link.closest('.trust-badges') ? 'trust_badge'
+            : link.closest('.article-footer') ? 'footer'
+            : 'inline_content'
+
+          gtag('event', 'amazon_affiliate_click', {
+            event_category: 'affiliate',
+            event_label: linkText,
+            page_path: pagePath,
+            link_position: linkPosition,
+            link_url: link.href,
+          })
+        }
+      }
+
       const interceptCTALinks = () => {
         const ctaButtons = document.querySelectorAll('.cta-button, .check-price-btn')
         ctaButtons.forEach(btn => {
           if (btn.textContent.includes('Check Price on Amazon')) {
             btn.setAttribute('rel', 'sponsored noopener noreferrer')
             btn.setAttribute('target', '_blank')
+          }
+        })
+
+        // Attach GA4 click tracking to all Amazon affiliate links
+        const amazonLinks = document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon.com"]')
+        amazonLinks.forEach(link => {
+          if (!link.dataset.gaTracked) {
+            link.addEventListener('click', () => trackAmazonClick(link))
+            link.dataset.gaTracked = 'true'
           }
         })
       }
@@ -98,11 +128,26 @@ export default {
         if (amazonUrl) {
           const btnContainer = document.createElement('div')
           btnContainer.className = 'article-actions'
-          btnContainer.innerHTML = `
-            <a class="article-action-btn brand" href="${amazonUrl}" target="_blank" rel="sponsored noopener noreferrer" role="button" aria-label="Check Price on Amazon">
-              Check Price on Amazon
-            </a>
-          `
+          const btn = document.createElement('a')
+          btn.className = 'article-action-btn brand'
+          btn.href = amazonUrl
+          btn.target = '_blank'
+          btn.rel = 'sponsored noopener noreferrer'
+          btn.setAttribute('role', 'button')
+          btn.setAttribute('aria-label', 'Check Price on Amazon')
+          btn.textContent = 'Check Price on Amazon'
+          btn.addEventListener('click', () => {
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'amazon_affiliate_click', {
+                event_category: 'affiliate',
+                event_label: 'Quick Summary CTA',
+                page_path: currentPath,
+                link_position: 'header_cta',
+                link_url: amazonUrl,
+              })
+            }
+          })
+          btnContainer.appendChild(btn)
           h1.parentNode.insertBefore(btnContainer, h1.nextSibling)
         }
       }
@@ -168,6 +213,17 @@ export default {
           buyBtn.target = '_blank'
           buyBtn.rel = 'sponsored noopener noreferrer'
           buyBtn.setAttribute('aria-label', 'Buy on Amazon')
+          buyBtn.addEventListener('click', () => {
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'amazon_affiliate_click', {
+                event_category: 'affiliate',
+                event_label: 'BUY floating button',
+                page_path: currentPath,
+                link_position: 'floating_buy',
+                link_url: amazonUrl,
+              })
+            }
+          })
           container.appendChild(buyBtn)
         }
 
