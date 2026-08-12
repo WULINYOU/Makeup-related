@@ -50,10 +50,10 @@ export default defineConfig({
   },
 
   sitemap: {
-    hostname: 'https://luxurybeautyedit.com',
+    hostname: 'https://makeup-related.pages.dev',
     transformItems(items) {
       return items.filter(item => {
-        const path = item.url.replace('https://luxurybeautyedit.com', '')
+        const path = item.url.replace('https://makeup-related.pages.dev', '')
         if (path.includes('/media')) return false
         return true
       })
@@ -66,7 +66,7 @@ export default defineConfig({
   },
 
   transformPageData(pageData) {
-    const hostname = 'https://luxurybeautyedit.com'
+    const hostname = 'https://makeup-related.pages.dev'
     const { frontmatter } = pageData
     const url = `${hostname}${pageData.relativePath.replace(/index\.md$/, '').replace(/\.md$/, '/')}`
     const ld = []
